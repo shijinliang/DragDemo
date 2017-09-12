@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjb-LA-oaI">
+                                <rect key="frame" x="87.5" y="313.5" width="200" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWI-5U-XEE">
+                                        <rect key="frame" x="2" y="2" width="196" height="36"/>
+                                        <subviews>
+                                            <imageView tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JsJ-1f-GpO">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JsJ-1f-GpO" secondAttribute="height" multiplier="1:1" id="tMo-uR-hbC"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="JsJ-1f-GpO" firstAttribute="leading" secondItem="HWI-5U-XEE" secondAttribute="leading" id="Fju-gC-5TK"/>
+                                            <constraint firstAttribute="bottom" secondItem="JsJ-1f-GpO" secondAttribute="bottom" id="S80-DE-vxO"/>
+                                            <constraint firstItem="JsJ-1f-GpO" firstAttribute="top" secondItem="HWI-5U-XEE" secondAttribute="top" id="q4f-aR-Nam"/>
+                                            <constraint firstItem="JsJ-1f-GpO" firstAttribute="centerY" secondItem="HWI-5U-XEE" secondAttribute="centerY" id="zJU-hR-1dZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.4039215686" blue="0.062745098040000002" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1yR-bg-0F2"/>
+                                    <constraint firstItem="HWI-5U-XEE" firstAttribute="top" secondItem="Rjb-LA-oaI" secondAttribute="top" constant="2" id="Kfs-uT-AMO"/>
+                                    <constraint firstItem="HWI-5U-XEE" firstAttribute="leading" secondItem="Rjb-LA-oaI" secondAttribute="leading" constant="2" id="QDD-wQ-kUS"/>
+                                    <constraint firstAttribute="trailing" secondItem="HWI-5U-XEE" secondAttribute="trailing" constant="2" id="QX2-GE-2OC"/>
+                                    <constraint firstAttribute="height" constant="40" id="Thj-gA-mMa"/>
+                                    <constraint firstAttribute="bottom" secondItem="HWI-5U-XEE" secondAttribute="bottom" constant="2" id="tQd-aH-6Ij"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rjb-LA-oaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d49-en-Gla"/>
+                            <constraint firstItem="Rjb-LA-oaI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zTF-43-5bF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerView" destination="HWI-5U-XEE" id="GUo-bD-1rK"/>
+                        <outlet property="imageView" destination="JsJ-1f-GpO" id="wTz-ge-wPd"/>
+                        <outlet property="manView" destination="Rjb-LA-oaI" id="kc2-ER-8Lk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
